@@ -1,9 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./{app,components,libs,pages,hooks}/**/*.{html,js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,  // تفعيل استخدام مجلد app بدل pages
   },
-  plugins: [],
-}
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+};
 
+module.exports = nextConfig;
